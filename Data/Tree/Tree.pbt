@@ -55,8 +55,6 @@ Objects {
   ChildIds: 3214297385604398644
   ChildIds: 1352620907516449235
   ChildIds: 9149833873444415802
-  ChildIds: 12139528818067829926
-  ChildIds: 4327198728575943513
   UnregisteredParameters {
   }
   WantsNetworking: true
@@ -78,149 +76,11 @@ Objects {
   }
 }
 Objects {
-  Id: 4327198728575943513
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -10.8828735
-      Y: 18.9681396
-      Z: 49.9466858
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3602736693497744193
-  ChildIds: 561612873239037105
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-}
-Objects {
-  Id: 561612873239037105
-  Name: "HurtScript"
-  Transform {
-    Location {
-      Z: -2.28881836e-05
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4327198728575943513
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Damage"
-      Float: 5
-    }
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15760641709657304619
-    }
-  }
-}
-Objects {
-  Id: 12139528818067829926
-  Name: "Trigger"
-  Transform {
-    Location {
-      X: -13.5172424
-      Y: 50
-      Z: 47.602562
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3602736693497744193
-  ChildIds: 827106861109080308
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-}
-Objects {
-  Id: 827106861109080308
-  Name: "HurtScript"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12139528818067829926
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Damage"
-      Float: 5
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15760641709657304619
-    }
-  }
-}
-Objects {
   Id: 9149833873444415802
   Name: "HurtTrigger"
   Transform {
     Location {
+      X: -17.27948
       Y: 20.5311584
       Z: 46.1043396
     }
@@ -234,6 +94,7 @@ Objects {
   }
   ParentId: 3602736693497744193
   ChildIds: 5040675016161744378
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -274,6 +135,7 @@ Objects {
       Float: 5
     }
   }
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -778,6 +640,7 @@ Objects {
   }
   ParentId: 14296522693940013484
   ChildIds: 15539193856098943952
+  ChildIds: 1975738971787895304
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -791,6 +654,68 @@ Objects {
       }
     }
     Canvas {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1975738971787895304
+  Name: "DeathReason"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17323446496153556797
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 378
+    Height: 60
+    UIX: 950.235352
+    UIY: 489.084839
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Death Reason"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 20
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -884,6 +809,7 @@ Objects {
   }
   ParentId: 4781671109827199097
   ChildIds: 7892886919295849531
+  ChildIds: 5561124270912072763
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -892,6 +818,33 @@ Objects {
   }
   NetworkContext {
     Type: Server
+  }
+}
+Objects {
+  Id: 5561124270912072763
+  Name: "CheckPlayerOOB"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8018496070928205381
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 512877243048125000
+    }
   }
 }
 Objects {
