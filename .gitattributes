@@ -1,2 +1,2 @@
 # Specify filepatterns you want to assign special attributes.
-*.pbt linguist-vendored
+*.pbt linguist-generated
